@@ -1,4 +1,5 @@
 
+
 public class HardcodedLogin {
     /**
      * This challenge represents a hardcoded login example:
@@ -15,6 +16,21 @@ public class HardcodedLogin {
      * @return true if there is a successful login, and false otherwise.
      */
     public boolean login(String username, String password){
+        username = "user";
+        password = "password";
+
+        username = new String("admin");
+        password = new String("qwerty");
+        
+        if(username == "user" && password == "password"){
+            return true;
+        } else if(username == "admin" && password == "qwerty"){
+            return true;
+        }else if(username == "user" && password == "qwerty"){
+            return false;
+        } else if(username == "admin" && password == "password"){
+            return false;
+        }
         return false;
     }
 }
