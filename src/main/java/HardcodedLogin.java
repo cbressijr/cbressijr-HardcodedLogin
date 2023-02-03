@@ -16,21 +16,12 @@ public class HardcodedLogin {
      * @return true if there is a successful login, and false otherwise.
      */
     public boolean login(String username, String password){
-        username = "user";
-        password = "password";
-
-        username = new String("admin");
-        password = new String("qwerty");
-        
-        if(username == "user" && password == "password"){
+        String[][] login = {{"user", "password"},{"admin", "qwerty"}};
+         if ((username == login[0][0]) && (password == login[0][1])){
             return true;
-        } else if(username == "admin" && password == "qwerty"){
-            return true;
-        }else if(username == "user" && password == "qwerty"){
+            }else if ((username != login[0][0]) && (password != login[0][1])){
             return false;
-        } else if(username == "admin" && password == "password"){
-            return false;
-        }
+            }
         return false;
     }
 }
